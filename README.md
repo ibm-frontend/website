@@ -1,6 +1,6 @@
-# Carbon Design System
+# FED@IBM
 
-This is the [Carbon Design System website](http://www.carbondesignsystem.com) which is built using GatsbyJS.
+This is the FED@IBM website which is built using GatsbyJS.
 
 ## 📂 Structure
 
