@@ -1,4 +1,4 @@
-## Carbon Code of Conduct
+## FED@IBM Code of Conduct
 
 This is a place to ask questions, work through any challenges, and share ideas and best practices. The following suggestions and guidelines are intended to make the community easier and more enjoyable to use.
 
@@ -10,13 +10,13 @@ This is a place to ask questions, work through any challenges, and share ideas a
 
 ### General
 
-Communication through any of Carbon's channels (GitHub, emails, Twitter, Slack) must be constructive and never resort to personal attacks, trolling, public or private harassment, insults, or other unprofessional conduct.
+Communication through any of our's channels (GitHub, emails, Twitter) must be constructive and never resort to personal attacks, trolling, public or private harassment, insults, or other unprofessional conduct.
 
-We promise to extend courtesy and respect to everyone involved in this project, regardless of gender, gender identity, sexual orientation, disability, age, race, ethnicity, religion, or level of experience. We expect anyone contributing to Carbon to do the same.
+We promise to extend courtesy and respect to everyone involved in this project, regardless of gender, gender identity, sexual orientation, disability, age, race, ethnicity, religion, or level of experience. We expect anyone contributing to FED@IBM to do the same.
 
-If any member of the community violates this Code of Conduct, the maintainers of Carbon may take action, including removing issues, comments, and PRs or blocking accounts, as deemed appropriate.
+If any member of the community violates this Code of Conduct, the maintainers of FED@IBM may take action, including removing issues, comments, and PRs or blocking accounts, as deemed appropriate.
 
-If you are subjected to or witness unacceptable behavior, or have any other concerns, please communicate with us directly via carbon@us.ibm.com.
+If you are subjected to or witness unacceptable behavior, or have any other concerns, please communicate with us by contacting an admin.
 
 <hr>
 
