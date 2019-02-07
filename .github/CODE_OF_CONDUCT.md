@@ -10,7 +10,7 @@ This is a place to ask questions, work through any challenges, and share ideas a
 
 ### General
 
-Communication through any of our's channels (GitHub, emails, Twitter) must be constructive and never resort to personal attacks, trolling, public or private harassment, insults, or other unprofessional conduct.
+Communication through any of our channels (GitHub, emails, Twitter) must be constructive and never resort to personal attacks, trolling, public or private harassment, insults, or other unprofessional conduct.
 
 We promise to extend courtesy and respect to everyone involved in this project, regardless of gender, gender identity, sexual orientation, disability, age, race, ethnicity, religion, or level of experience. We expect anyone contributing to FED@IBM to do the same.
 
