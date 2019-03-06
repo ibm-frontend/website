@@ -14,8 +14,7 @@ import {
   HeaderGlobalBar,
   HeaderGlobalAction,
 } from 'carbon-components-react/lib/components/UIShell';
-import { AppSwitcher20, Close20 } from '@carbon/icons-react';
-import { WebsiteFooter, WebsiteSwitcher } from '@carbon/addons-website';
+import { WebsiteFooter } from '@carbon/addons-website';
 
 import timestamp from 'raw-loader!../../../build-timestamp';
 import '../../styles/index.scss';
@@ -29,8 +28,6 @@ class Layout extends React.Component {
   state = {
     isLeftNavOpen: false,
     isLeftNavFinal: false,
-    isSwitcherOpen: false,
-    isSwitcherFinal: false,
   };
 
   componentDidMount() {
@@ -158,12 +155,12 @@ class Layout extends React.Component {
                 {
                   name: 'description',
                   content:
-                    'Carbon is the design system for IBM web and product. It is a series of individual styles, components, and guidelines used for creating unified UI.',
+                    'IBM Front-end Development is the home of the FED@IBM program and community.',
                 },
                 {
                   name: 'keywords',
                   content:
-                    'IBM, design, system, Carbon, design system, Bluemix, styleguide, style, guide, components, library, pattern, kit, component, cloud',
+                    'IBM, fed, FED@IBM, front-end development',
                 },
               ]}
               link={[
@@ -190,49 +187,23 @@ class Layout extends React.Component {
                 }
                 isActive={isLeftNavOpen}
               />
-              {isInternal ? (
-                <HeaderName prefix="" to="/" element={Link} href="/">
-                  <span>IBM Product</span>&nbsp;Design&nbsp;<span>System</span>
-                </HeaderName>
-              ) : (
-                  <HeaderName prefix="" to="/" element={Link}>
-                    <span>Carbon</span>&nbsp;Design&nbsp;<span>System</span>
-                  </HeaderName>
-                )}
-
-              <HeaderGlobalBar>
+              <HeaderName prefix="" to="/" element={Link}>
+                <span>IBM</span>&nbsp;Front-end&nbsp;<span>Development</span>
+              </HeaderName>
+               <HeaderGlobalBar>
                 {/* {isInternal ? null : <GlobalSearch />} */}
                 <HeaderGlobalAction
                   className="bx--header__action--switcher"
                   aria-label="Switch"
                   onClick={() =>
                     this.onToggleBtnClick(
-                      'isSwitcherOpen',
-                      'isSwitcherFinal',
                       'isLeftNavOpen',
                       'isLeftNavFinal'
                     )
                   }>
-                  {this.state.isSwitcherOpen ? <Close20 /> : <AppSwitcher20 />}
                 </HeaderGlobalAction>
               </HeaderGlobalBar>
             </Header>
-
-            <WebsiteSwitcher
-              isSwitcherFinal={this.state.isSwitcherFinal}
-              isSwitcherOpen={this.state.isSwitcherOpen}
-              links={[
-                {
-                  href: 'https://www.ibm.com/design/language/',
-                  linkText: 'IBM Design Language',
-                },
-                {
-                  href: 'https://www.ibm.com/standards/web/',
-                  linkText: 'IBM Digital Design',
-                },
-                { href: 'https://www.ibm.com/design/', linkText: 'IBM Design' },
-              ]}
-            />
 
             <LeftNav
               is404Page={is404}
@@ -247,40 +218,21 @@ class Layout extends React.Component {
               <WebsiteFooter
                 logoOffset={true}
                 linksCol1={[
-                  { href: '/contributing/designers', linkText: 'Contribute' },
                   { href: 'https://www.ibm.com/privacy', linkText: 'Privacy' },
                   {
                     href: 'https://www.ibm.com/legal',
                     linkText: 'Terms of Use',
                   },
                   { href: 'https://www.ibm.com', linkText: 'IBM.com' },
-                ]}
-                linksCol2={[
-                  {
-                    href: 'https://dribbble.com/_carbondesign',
-                    linkText: 'Dribbble',
-                  },
-                  {
-                    href: 'https://medium.com/@_carbondesign',
-                    linkText: 'Medium',
-                  },
-                  {
-                    href: 'https://twitter.com/_carbondesign',
-                    linkText: 'Twitter',
-                  },
                 ]}>
                 <p>
-                  Have questions? Email us or open an issue <br />
+                  Have questions? <a href="mailto:frontend@us.ibm.com">Email us</a> or open an issue <br />
                   in{' '}
-                  <a href="https://github.com/carbon-design-system/carbon-website/issues/new/choose">
+                  <a href="https://github.com/ibm-frontend/program/issues">
                     GitHub.
                   </a>
                 </p>
                 <p>
-                  Vanilla Components version {version}
-                  <br />
-                  React Components version {reactVersion}
-                  <br />
                   Last updated {lastUpdated}
                   <br />
                   Copyright © {currentYear} IBM

@@ -4,7 +4,7 @@ import { Link } from 'gatsby';
 
 export class HomepageHeader extends React.Component {
   componentDidMount() {
-    document.title = 'Carbon Design System';
+    document.title = 'Front-End Development';
   }
 
   render() {
