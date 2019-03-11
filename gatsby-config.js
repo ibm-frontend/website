@@ -7,14 +7,14 @@ const { PATH_PREFIX = '/' } = process.env;
 module.exports = {
   pathPrefix: PATH_PREFIX,
   siteMetadata: {
-    title: 'Carbon Design System',
-    titleInternal: 'IBM Product Design',
+    title: 'IBM Front-end Development',
+    titleInternal: 'FED@IBM',
   },
   plugins: [
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
-        trackingId: 'UA-131128838-1',
+        trackingId: '',
       },
     },
     `gatsby-plugin-sharp`,
@@ -22,11 +22,11 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Carbon Design System`,
-        short_name: `Carbon`,
+        name: `IBM Front-end Development`,
+        short_name: `FED`,
         start_url: `/`,
         background_color: `#000000`,
-        theme_color: `#cccccc`,
+        theme_color: `#9deeb2`,
         display: `minimal-ui`,
         icon: `src/content/global/images/favicon-32.png`, // This path is relative to the root of the site.
       },
