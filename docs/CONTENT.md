@@ -2,30 +2,14 @@
 
 ## File Structure
 
-All markdown files live inside of the `src/content` folder and follow the site navigation. They live inside a folder that is named the same as the file unless it is a page with tabbed navigation. "Tabbed" pages _(for example Getting Starter > Developers)_ should have all the pages inside the same folder, with the file name matching the page title.
+All markdown files live inside of the `src/content` folder and follow the site navigation. They live inside a folder that is named the same as the file unless it is a page with tabbed navigation. "Tabbed" pages _(for example FEDucation > Apply To Speak )_ should have all the pages inside the same folder, with the file name matching the page title.
 
 ```
 src
 ├── content
-   ├── getting-started
-      ├── designers
-          ├── images
-                ├── image1.png
-                ├── image2.png
-          ├── designers.md
-```
-
-or
-
-```
-src
-├── content
-   ├── getting-started
-      ├── developers
-          ├── angular.md
-          ├── other-frameworks.md
-          ├── react.md
-          ├── vanilla.md
+   ├── feducation
+      ├── apply-to-speak
+          ├── apply-to-speak.md
 ```
 
 ## Frontmatter
@@ -71,11 +55,11 @@ Non-required fields are:
 
 You can create an inline link by wrapping link text in brackets [ ], and then wrapping the URL in parentheses ( ).
 
-`[Carbon](http://www.carbondesignsystem.com/)`
+`[IBM](http://www.ibm.com/)`
 
 If you need a link to open in a new window you will have to use standard html to target the new window.
 
-`<a href="http://www.carbondesignsystem.com" target="_blank">Carbon</a></p>`
+`<a href="http://www.ibm.com" target="_blank">IBM</a></p>`
 
 ### Images
 
@@ -200,6 +184,8 @@ Properties
 
 #### Clickable Tile
 
+TODO: Update with an example from front-end site 
+
 ```
 
 <clickable-tile
@@ -227,41 +213,6 @@ This will render the following group of clickable tiles
 
 ![Tile Group](https://user-images.githubusercontent.com/2753488/43804229-e8d26a22-9a60-11e8-9aa9-e4f9b9759757.png)
 
-#### Example of the Do/Don't components:
-
-- can include property `full=true` to use the example as a full-width component.
-    - e.g. `<do-dont-example full=true>`
-    - this option will cause the element to fill the full width of its containing wrappper. adjust the column count of the enclosing `<grid-wrapper>` to expand the maxium width.
-
-##### With text examples:
-
-```
-<grid-wrapper col_lg="8" flex="true">
-    <do-dont-example correct=true label="Active Voice" text='"In the Limits window, specify the minimum and maximum values."'></do-dont-example>
-    <do-dont-example label='Passive Voice' text='"The Limits window is used to specify the minimum and maximum values."'></do-dont-example>
-</grid-wrapper>
-```
-
-This will render the following set of examples:
-![Example of the Do/Don't component with text examples](https://user-images.githubusercontent.com/2753488/43850488-aba55aea-9afd-11e8-921d-418f65cf2460.png)
-
----
-
-##### With image examples:
-
-```
-<grid-wrapper col_lg="8" flex="true">
-    <do-dont-example correct="true" label='Image Test'>
-        <img src='images/img-test.png' />
-    </do-dont-example>
-    <do-dont-example label='Image Test' >
-        <img src='images/img-test.png' />
-    </do-dont-example>
-</grid-wrapper>
-```
-
-This will render the following set of examples:
-![Example of the Do/Don't component with image examples](https://user-images.githubusercontent.com/2753488/43850488-aba55aea-9afd-11e8-921d-418f65cf2460.png)
 
 #### Website Tabs
 
