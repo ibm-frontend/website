@@ -57,19 +57,10 @@ rm -rf .cache
 # Switch on the BUILD_ENV to target all of our supported build environments
 case ${BUILD_ENV} in
   "external")
-    GATSBY_CARBON_ENV=$BUILD_ENV $(yarn bin)/gatsby build --prefix-paths
+    GATSBY_ENV=$BUILD_ENV $(yarn bin)/gatsby build --prefix-paths
     ;;
   "internal")
-    GATSBY_CARBON_ENV=$BUILD_ENV PATH_PREFIX='/design/product' $(yarn bin)/gatsby build --prefix-paths
-
-    # Temporary hack for our Staticfile deployments. We need to support
-    # /design/product for our internal deployment. As a result, we need the
-    # files hosted at public/design/product so that nginx will serve the files
-    # when the /design/product route is hit
-    rm -rf public/design
-    cp -R public tmp
-    mkdir -p public/design
-    mv tmp public/design/product
+    GATSBY_ENV=$BUILD_ENV $(yarn bin)/gatsby build --prefix-paths
     ;;
   *)
     echo "The build environment \`${BUILD_ENV}\` is unsupported."

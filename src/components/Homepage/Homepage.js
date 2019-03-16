@@ -8,8 +8,8 @@ export class HomepageHeader extends React.Component {
   }
 
   render() {
-    const { GATSBY_CARBON_ENV } = process.env;
-    const isInternal = GATSBY_CARBON_ENV == 'internal';
+    const { GATSBY_ENV } = process.env;
+    const isInternal = GATSBY_ENV == 'internal';
     // Banner image
     const bannerImg = require('../../content/homepage/images/homepage_img.jpg');
 

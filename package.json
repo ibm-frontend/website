@@ -1,12 +1,15 @@
 {
-  "name": "IBM-frontend-website",
+  "name": "ibm-frontend-website",
   "description": "FED@IBM website",
   "private": true,
   "version": "0.0.0",
   "license": "Apache-2.0",
   "repository": {
     "type": "git",
-    "url": "https://github.com/carbon-design-system/carbon-website-gatsby/"
+    "url": "https://github.com/ibm-front-end/website/"
+  },
+  "engines": {
+    "node": ">=8.11.3"
   },
   "keywords": [
     "gatsby"
@@ -26,8 +29,8 @@
     "clean": "lerna clean --yes && rm -rf build && rm -rf node_modules",
     "clean:cache": "rm -rf .cache",
     "dev": "yarn dev:external",
-    "dev:external": "./tasks/build-timestamp.sh && cross-env GATSBY_CARBON_ENV=external gatsby develop",
-    "dev:internal": "./tasks/build-timestamp.sh && cross-env GATSBY_CARBON_ENV=internal gatsby develop",
+    "dev:external": "./tasks/build-timestamp.sh && cross-env GATSBY_ENV=external gatsby develop",
+    "dev:internal": "./tasks/build-timestamp.sh && cross-env GATSBY_ENV=internal gatsby develop",
     "format": "prettier --write \"**/*.{scss,css,js,md}\"",
     "format:diff": "prettier --list-different \"**/*.{scss,css,js,md}\"",
     "test": "echo \"Error: no test specified\" && exit 1",

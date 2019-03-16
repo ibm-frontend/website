@@ -1,0 +1,8 @@
+applications:
+  - name: front-end-site-staging
+    memory: 64M
+    buildpacks: 
+      - https://github.com/cloudfoundry/staticfile-buildpack.git
+    routes:
+      - route: front-end-staging-site.w3ibm.mybluemix.net
+    path: public
