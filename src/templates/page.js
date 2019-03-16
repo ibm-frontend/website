@@ -99,8 +99,8 @@ export default ({ data }) => {
   let tabs = post.frontmatter.tabs;
   let internal = post.frontmatter.internal;
 
-  const { GATSBY_CARBON_ENV } = process.env;
-  const isInternal = GATSBY_CARBON_ENV !== 'internal' && internal == true;
+  const { GATSBY_ENV } = process.env;
+  const isInternal = GATSBY_ENV !== 'internal' && internal == true;
   const homepage = (post.frontmatter.title === 'Homepage') == true;
 
   if (isInternal) {

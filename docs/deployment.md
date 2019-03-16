@@ -2,22 +2,6 @@
 
 _Don't forget to update the date in Footer.js component_
 
-## Random (for staging or test links)
-
-```bash
-# Build the internal site
-yarn build:internal
-
-# Or build the external site
-yarn build:external
-
-# Login
-ibmcloud login --sso  -a https://api.stage1.ng.bluemix.net  -o 'carbon@us.ibm.com' -s production
-
-# Deploy to random url
-ibmcloud cf push -f .circleci/manifest.random.yml
-```
-
 ## Internal
 
 ```bash
@@ -31,17 +15,23 @@ npx serve public
 http://localhost:5000
 
 # Login
-ibmcloud login --sso  -a https://api.stage1.ng.bluemix.net  -o 'carbon@us.ibm.com' -s production
+cf login -a api.w3ibm.bluemix.net -o IBMDesign -s front-end
 
 # Make sure you have blue-green-deploy installed as a plugin for cf
-ibmcloud cf add-plugin-repo CF-Community https://plugins.cloudfoundry.org
-ibmcloud cf install-plugin blue-green-deploy -r CF-Community
+cf add-plugin-repo CF-Community https://plugins.cloudfoundry.org
+cf install-plugin blue-green-deploy -r CF-Community
+
+# Deploy the internal staging website
+cf blue-green-deploy -f manifest.internal.staging.yml --delete-old-apps
+
+# Deploy the internal staging website without bluegreen
+cf push -f manifest.internal.staging.yml
 
 # Deploy the internal website
-ibmcloud cf blue-green-deploy carbon-website-internal  -f .circleci/manifest.internal.yml --delete-old-apps
+cf blue-green-deploy -f manifest.internal.yml --delete-old-apps
 
 # Deploy the internal website without bluegreen
-ibmcloud cf push carbon-website-internal  -f .circleci/manifest.internal.yml
+cf push -f manifest.internal.yml
 ```
 
 ## External

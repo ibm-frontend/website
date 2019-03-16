@@ -56,9 +56,9 @@ export default class LeftNavItem extends React.Component {
 
   renderSubNavItems = (subItems, location, itemSlug) => {
     return Object.keys(subItems).map(item => {
-      const { GATSBY_CARBON_ENV } = process.env;
+      const { GATSBY_ENV } = process.env;
       const hideInternal =
-        GATSBY_CARBON_ENV !== 'internal' && subItems[item].internal;
+        GATSBY_ENV !== 'internal' && subItems[item].internal;
       // Check that the itemSlug (top most nav item w/ chidlren) matches the
       // zeroeth indexed normalized path array item. This is so we avoid conflicting
       // children with similar names but disimilar parents.
