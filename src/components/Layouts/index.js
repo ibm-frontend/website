@@ -5,7 +5,7 @@ import { StaticQuery, graphql, Link } from 'gatsby';
 import Packages from '../../../package.json';
 import GlobalSearch from '../GlobalSearch';
 import LeftNav from '../LeftNav';
-import favicon32 from '../../content/global/images/favicon-32.png';
+import favicon32 from '../../content/global/images/favicon.ico';
 import {
   Header,
   HeaderMenuButton,
@@ -180,9 +180,7 @@ class Layout extends React.Component {
                 onClick={() =>
                   this.onToggleBtnClick(
                     'isLeftNavOpen',
-                    'isLeftNavFinal',
-                    'isSwitcherOpen',
-                    'isSwitcherFinal'
+                    'isLeftNavFinal'
                   )
                 }
                 isActive={isLeftNavOpen}
@@ -192,16 +190,6 @@ class Layout extends React.Component {
               </HeaderName>
                <HeaderGlobalBar>
                 {/* {isInternal ? null : <GlobalSearch />} */}
-                <HeaderGlobalAction
-                  className="bx--header__action--switcher"
-                  aria-label="Switch"
-                  onClick={() =>
-                    this.onToggleBtnClick(
-                      'isLeftNavOpen',
-                      'isLeftNavFinal'
-                    )
-                  }>
-                </HeaderGlobalAction>
               </HeaderGlobalBar>
             </Header>
 

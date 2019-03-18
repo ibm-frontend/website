@@ -13,16 +13,10 @@ class NotFoundPage extends React.Component {
           <div className="anchor-links anchor-links--small fourohfour-body__anchor-links">
             <ul className="page-ul">
               <li>
-                <Link to="/getting-started/about-carbon">Getting started</Link>
+                <Link to="/program">About FED@IBM</Link>
               </li>
               <li>
-                <Link to="/components/overview">Component overview</Link>
-              </li>
-              <li>
-                <Link to="/guidelines/iconography/library">Iconography</Link>
-              </li>
-              <li>
-                <Link to="/resources">Resources</Link>
+                <Link to="/feducation/overview">FEDucation overview</Link>
               </li>
             </ul>
           </div>

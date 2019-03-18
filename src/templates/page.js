@@ -121,7 +121,7 @@ export default ({ data }) => {
           <main className="page-content ibm--grid" id="maincontent">
             {renderAst(post.htmlAst)}
           </main>
-          <HomepageFooter />
+          {/* <HomepageFooter /> */}
         </div>
         <BackToTop />
       </Layout>
