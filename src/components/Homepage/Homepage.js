@@ -11,17 +11,16 @@ export class HomepageHeader extends React.Component {
     const { GATSBY_ENV } = process.env;
     const isInternal = GATSBY_ENV == 'internal';
     // Banner image
-    const bannerImg = require('../../content/homepage/images/homepage_img.jpg');
+    const bannerImg = require('../../content/homepage/images/homepage_image.jpg');
 
     const homeTitle = isInternal ? (
       <h3 className="homepage--header__title">
-        IBM Product <br />
-        Design System
+        FED@IBM
       </h3>
     ) : (
       <h3 className="homepage--header__title">
-        Carbon <br />
-        Design System
+        Front-end  <br />
+        Development at IBM
       </h3>
     );
 
@@ -29,11 +28,6 @@ export class HomepageHeader extends React.Component {
       <div>
         <span className="homepage--dots" />
         <section className="homepage--header">
-          <div className="ibm--grid">
-            <div className="ibm--row">
-              <div className="ibm--col-lg-4 ibm--offset-lg-4">{homeTitle}</div>
-            </div>
-          </div>
           <img src={bannerImg} alt="IBM Product Design System banner image" />
         </section>
         <div className="homepage--callout">
@@ -41,18 +35,11 @@ export class HomepageHeader extends React.Component {
             <div className="ibm--row">
               <div className="ibm--col-md-4  ibm--col-lg-4 ibm--offset-lg-4">
                 <h3>
-                  Inclusive, flexible
-                  <br />
-                  and consistent
+                IBM is where developers can go to work on things that matter.
                 </h3>
               </div>
               <div className="ibm--col-lg-8 ibm--col-md-4">
-                <h2 className="bx--type-expressive-paragraph-01">
-                  The <strong>Carbon Design System</strong> is IBM&rsquo;s
-                  open-source design system for products and experiences. With
-                  the IBM Design Language as its foundation, the system consists
-                  of working code, design tools and resources, human interface
-                  guidelines, and a vibrant community of contributors.
+                <h2 className="bx--type-expressive-paragraph-02">At IBM, we have built a community and program of support where developers can grow their career and their skills. We call this community and program FED@IBM or Front-end Development at IBM.
                 </h2>
               </div>
             </div>

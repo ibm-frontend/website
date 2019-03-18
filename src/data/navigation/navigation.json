@@ -2,6 +2,10 @@
   "program": {
     "title": "Program"
   },
+  "essentials": {
+    "title": "Design System Essentials",
+    "internal": true
+  },
   "people": {
     "title": "People",
     "sub-nav": {
@@ -36,6 +40,11 @@
       }
     }
   },
+  "branches": {
+    "title": "Local Branches",
+    "internal": true
+  },
+  
   "feducation": {
     "title": "FEDucation",
     "sub-nav": {
@@ -50,6 +59,21 @@
       },
       "livestream": {
         "title": "Livestream"
+      }
+    }
+  },
+  "fedcast": { 
+    "title": "Career Careening FEDcast",
+    "internal": true,
+    "sub-nav": {
+      "upcoming": {
+        "title": "Upcoming Shows"
+      },
+      "archives": {
+        "title": "Show Archives"
+      },
+      "hosts": {
+        "title": "Show Hosts"
       }
     }
   },
