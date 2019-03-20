@@ -17,13 +17,6 @@ import { Launch16 } from '@carbon/icons-react';
 export default class LeftNav extends React.Component {
   renderNavItems = (nav, loc) =>
     Object.keys(nav).map(item => {
-      const { GATSBY_ENV } = process.env;
-      const hideInternal =
-        GATSBY_ENV !== 'internal' && nav[item].internal;
-
-      if (hideInternal) {
-        return '';
-      }
       return (
         <LeftNavItem
           isCurrentCategory={loc.pathname.includes(item) ? true : false}
@@ -37,7 +30,6 @@ export default class LeftNav extends React.Component {
 
   render() {
     const { GATSBY_ENV } = process.env;
-    const isInternal = GATSBY_ENV == 'internal';
 
     const { isLeftNavOpen, isLeftNavFinal, is404Page } = this.props;
 

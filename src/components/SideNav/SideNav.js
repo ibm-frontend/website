@@ -11,13 +11,6 @@ import navigation from '../../data/navigation/navigation.json';
 export default class SideNav extends React.Component {
   renderNavItems = (nav, loc) =>
     Object.keys(nav).map(item => {
-      const { GATSBY_ENV } = process.env;
-      const hideInternal =
-        GATSBY_ENV !== 'internal' && nav[item].internal;
-
-      if (hideInternal) {
-        return '';
-      }
       return (
         <SideNavItem
           itemSlug={item}
@@ -36,9 +29,6 @@ export default class SideNav extends React.Component {
     };
 
   render() {
-    const { GATSBY_ENV } = process.env;
-    const isInternal = GATSBY_ENV == 'internal';
-
     const { isOpen, isFinal } = this.props;
 
     const classNames = classnames({
@@ -70,19 +60,10 @@ export default class SideNav extends React.Component {
               </a>
               <nav className={classNames}>
                 <div className="side-nav--header">
-                  
-                  {isInternal ? (
                     <Link to="/" className="side-nav__logo">
-                      IBM <span>Product Design</span>
+                      <span>Carbon</span> Design System
                     </Link>
-                  ) : (
-                    <>
-                      <Link to="/" className="side-nav__logo">
-                        <span>Carbon</span> Design System
-                      </Link>
-                      <GlobalSearch />
-                    </>
-                  )}
+                    <GlobalSearch />
                 </div>
                 <div className="side-nav--items">
                   <ul role="menu" className="side-nav__nav-items">{navItems}</ul>

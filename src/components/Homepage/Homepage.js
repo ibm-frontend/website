@@ -8,21 +8,13 @@ export class HomepageHeader extends React.Component {
   }
 
   render() {
-    const { GATSBY_ENV } = process.env;
-    const isInternal = GATSBY_ENV == 'internal';
     // Banner image
     const bannerImg = require('../../content/homepage/images/homepage_image.jpg');
 
-    const homeTitle = isInternal ? (
-      <h3 className="homepage--header__title">
-        FED@IBM
-      </h3>
-    ) : (
-      <h3 className="homepage--header__title">
-        Front-end  <br />
-        Development at IBM
-      </h3>
-    );
+    <h3 className="homepage--header__title">
+      Front-end  <br />
+      Development at IBM
+    </h3>
 
     return (
       <div>
