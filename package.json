@@ -18,16 +18,12 @@
     "nohoist": []
   },
   "scripts": {
-    "build": "echo 'ERROR: Please specify environment by running either build:external or build:internal. This will set the correct environment variable for the build.'",
+    "build": "rm -rf public && yarn build:packages && ./tasks/build.sh",
     "build:packages": "lerna run build --stream --prefix --npm-client yarn",
-    "build:external": "rm -rf public && yarn build:packages && ./tasks/build.sh --env external",
-    "build:internal": "rm -rf public && yarn build:packages && ./tasks/build.sh --env internal",
     "serve": "gatsby serve",
     "clean": "lerna clean --yes && rm -rf build && rm -rf node_modules",
     "clean:cache": "rm -rf .cache",
-    "dev": "yarn dev:external",
-    "dev:external": "./tasks/build-timestamp.sh && cross-env GATSBY_ENV=external gatsby develop",
-    "dev:internal": "./tasks/build-timestamp.sh && cross-env GATSBY_ENV=internal gatsby develop",
+    "dev": "./tasks/build-timestamp.sh && cross-env gatsby develop",
     "format": "prettier --write \"**/*.{scss,css,js,md}\"",
     "format:diff": "prettier --list-different \"**/*.{scss,css,js,md}\"",
     "test": "echo \"Error: no test specified\" && exit 1",

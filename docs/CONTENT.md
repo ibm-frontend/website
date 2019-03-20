@@ -21,7 +21,6 @@ The top of each markdown file has required frontmatter fields to display the hea
 label: Optional paragraph of text at the top of a page
 title: Page Title
 tabs: ['Tab 1', 'Tab 2', 'Tab 3'']
-internal: true
 ---
 ```
 
@@ -33,7 +32,6 @@ Non-required fields are:
 
 - `label`: The label of the page _(if added then header will display at medium height instead of small)_
 - `tabs`: An array of the page tabs (in the desired order), tab name should match markdown file name.
-- `internal: true` Used to designate internal only content for display on w3 website.
 
 ## Markdown
 
