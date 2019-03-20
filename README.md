@@ -39,24 +39,12 @@ Run dev environment
 yarn dev
 ```
 
-Run internal dev environment
-
-```
-yarn dev:internal
-```
-
 ## 🚀 Build
 
 Runing the build commands generates all the files and places them in the `public` folder.
 
-Build external site
+Build site
 
 ```
-yarn build:external
-```
-
-Build internal site
-
-```
-yarn build:internal
+yarn build
 ```
