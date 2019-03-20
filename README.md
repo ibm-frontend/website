@@ -48,3 +48,13 @@ Build site
 ```
 yarn build
 ```
+
+## Deploy to private cloud (staging environment)
+
+You must be added to the private cloud to deploy to the IBMDesignOrg `front-end` space. The files in the `public` distribution folder are deployed so a build must be done prior to pushing.
+
+```
+yarn build 
+cf push -f manifest.internal.yml
+```
+

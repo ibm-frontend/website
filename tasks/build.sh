@@ -4,7 +4,6 @@ function print_help {
   echo "Usage: ${0} [OPTIONS]"
   echo ""
   echo "OPTIONS:"
-  echo "  --env <environment>  the environment for gatsby to target for builds"
   echo "  --help                    print this message and exit"
   echo ""
 }
@@ -27,10 +26,6 @@ root_path=$PWD
 # Parse our CLI arguments, most notably --env
 while [ "$1" != "" ]; do
   case $1 in
-    "--env")
-      shift
-      BUILD_ENV=$1
-      ;;
     "--help")
       print_help
       exit 0
@@ -39,31 +34,10 @@ while [ "$1" != "" ]; do
   shift
 done
 
-# We want to verify that --env was passed in and supplied a value.
-# If not, exit early and print our help instructions
-if [ "$BUILD_ENV" == "" ]
-then
-  echo "--env flag is required for ${0} to run"
-  print_help
-  exit 1
-fi
-
 # Remove the .cache directory to prevent any weirdness
 rm -rf .cache
 
 # Generate build timestamp
 /bin/sh ./tasks/build-timestamp.sh
 
-# Switch on the BUILD_ENV to target all of our supported build environments
-case ${BUILD_ENV} in
-  "external")
-    GATSBY_ENV=$BUILD_ENV $(yarn bin)/gatsby build --prefix-paths
-    ;;
-  "internal")
-    GATSBY_ENV=$BUILD_ENV $(yarn bin)/gatsby build --prefix-paths
-    ;;
-  *)
-    echo "The build environment \`${BUILD_ENV}\` is unsupported."
-    exit 1
-    ;;
-esac
+$(yarn bin)/gatsby build --prefix-paths
