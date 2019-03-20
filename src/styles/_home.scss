@@ -399,23 +399,3 @@
   left: 4rem;
   z-index: 1;
 }
-
-
-// Internal only
-.overview-page__banner.overview-page__banner--internal {
-  background: $ibm-colors__black;
-  color: $ibm-colors__gray--10;
-  align-items: normal;
-  height: 560px;
-  display: flex;
-  justify-content: flex-end;
-}   
-
-.overview-page__banner--internal {
-  .banner__logo {
-    text-transform: none;
-    padding: 0 0 16px 120px;
-    font-size: 122px;
-    letter-spacing: 0px;
-  }
-}

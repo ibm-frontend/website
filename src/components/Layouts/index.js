@@ -116,8 +116,6 @@ class Layout extends React.Component {
   };
 
   render() {
-    const { GATSBY_ENV } = process.env;
-    const isInternal = GATSBY_ENV == 'internal';
     const { children } = this.props;
     const version = Packages.dependencies['carbon-components'];
     const reactVersion = Packages.dependencies['carbon-components-react'];
@@ -147,9 +145,7 @@ class Layout extends React.Component {
           <>
             <Helmet
               title={
-                isInternal
-                  ? data.site.siteMetadata.titleInternal
-                  : data.site.siteMetadata.title
+                data.site.siteMetadata.title
               }
               meta={[
                 {
@@ -189,7 +185,6 @@ class Layout extends React.Component {
                 <span>IBM</span>&nbsp;Front-end&nbsp;<span>Development</span>
               </HeaderName>
                <HeaderGlobalBar>
-                {/* {isInternal ? null : <GlobalSearch />} */}
               </HeaderGlobalBar>
             </Header>
 

@@ -3,8 +3,7 @@
     "title": "Program"
   },
   "essentials": {
-    "title": "Design System Essentials",
-    "internal": true
+    "title": "Design System Essentials"
   },
   "people": {
     "title": "People",
@@ -41,8 +40,7 @@
     }
   },
   "branches": {
-    "title": "Local Branches",
-    "internal": true
+    "title": "Local Branches"
   },
   
   "feducation": {
@@ -64,7 +62,6 @@
   },
   "fedcast": { 
     "title": "Career Careening FEDcast",
-    "internal": true,
     "sub-nav": {
       "upcoming": {
         "title": "Upcoming Shows"

@@ -15,6 +15,7 @@ $feature-flags: (
   components-x: true,
   ui-shell: true,
 );
+
 @import '@carbon/layout/scss/layout.scss';
 .container {
   //need this to avoid conflicts with old grid code
